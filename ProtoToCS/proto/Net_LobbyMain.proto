@@ -1,0 +1,13 @@
+syntax = "proto3";
+package Hotfix.Net.Protol;
+option go_package = "./pb";
+
+message BuffData
+{
+     int32 id = 1;                     // 配表id
+     int32 buffSid = 2;                
+     int32 opt = 3;                    
+     int32 delReason = 4;              
+     int32 leftRound = 5;              
+     int32 owner = 6;                  
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+package Hotfix.Net.Protol;
+option go_package = "./pb";
+
+import "Net_LobbyMain.proto";
+
+//xxxxccc曹操曹操传
+message Net_Login
+{
+     int32 id = 1;                     // 配表id
+     int32 level = 2;        
+	 BuffData wawa =3;	 
+}

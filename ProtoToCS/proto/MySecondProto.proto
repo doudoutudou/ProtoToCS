@@ -1,0 +1,9 @@
+syntax = "proto3";
+package Hotfix.Net.Protol;
+option go_package = "./pb";
+
+message UnitData
+{
+     int32 id = 1;                     // 配表id
+     string name = 2;                        
+}
