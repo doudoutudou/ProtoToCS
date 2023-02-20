@@ -1,5 +1,5 @@
 syntax = "proto3";
-package Hotfix.Net.Protol;
+package pb;
 option go_package = "./pb";
 
 message UnitData

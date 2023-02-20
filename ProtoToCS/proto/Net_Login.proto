@@ -1,13 +1,73 @@
 syntax = "proto3";
-package Hotfix.Net.Protol;
+package Protol;
 option go_package = "./pb";
 
 import "Net_LobbyMain.proto";
-
+//不能用下划线槽
 //xxxxccc曹操曹操传
-message Net_Login
-{
-     int32 id = 1;                     // 配表id
-     int32 level = 2;        
-	 BuffData wawa =3;	 
+message NetLoginCSLogin
+{   
+     string  credential = 1; //"模拟登陆 credential 凭据"
+     string  package = 2; //"模拟登陆 credential 凭据"
+     string  version = 3; //版本
+     string  hot_version = 4; //版本
+     string  device_model = 5;
+     string  sys_version = 6;
+     int32   is_real_login = 7;
+     string  uuid = 8;
+     string  apple_id = 9;
+     string  hms_id = 10;
+     string  adid = 11;
+     
 }
+message NetLoginSCLogin
+{
+     int32   ret = 1;
+
+}
+//活着
+message NetLoginCSKeepalive
+{
+
+     BuffData wawa =1;
+}
+    
+//heartbeat 心跳包
+message NetLoginCSHeartBeat
+{
+
+     
+}
+message NetLoginSCHeartBeat
+{
+
+
+}
+message Request {
+     //extensions 100 to max;
+     enum Type {
+          LOGIN = 0;
+          CHANGE_PASSWORD = 1;
+          START_SCALE = 2;
+          STOP_SCALE = 3;
+          DATA_PPG = 4;
+          DATA_EP = 5;
+          DATA_HRV = 6;
+          DATA_IBI = 7;
+          MARK_SCALE = 8;
+          RESOURCE_LIST = 9;
+          UPDATE_USER_INFO = 10;
+          GET_SCALE_LIST = 11;
+          GET_SCALE = 12;
+     }
+     //required Type type = 1;
+     //optional string timestamp = 2;
+}
+
+message Net_Login_SC_Login
+{
+  int32 ret = 1;                     // 状态
+
+}
+
+
